@@ -1,19 +1,33 @@
-# Python cache
+# Python
 __pycache__/
 *.py[cod]
-
-# General cache
-.cache/
-*.cache/
-
-# Database files
 *.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
 *.db
-*.sqlite
 
-# Env file
+# Django
+*.sqlite3
+*.env
 .env
+.env.*
 
-# Pytest and IDE cache
-.pytest_cache/
+# VSCode / IDEs
 .vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Virtualenv
+venv/
+env/
+ENV/
+.venv/
+.Python
+
+# Migrations
+*/migrations/__pycache__/
+*/migrations/*.py[cod]
