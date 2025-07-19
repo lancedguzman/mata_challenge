@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# General cache
+.cache/
+*.cache/
+
+# SQLite databases
+*.sqlite3
+*.db
+*.sqlite
+
+# Django migration cache
+*.log
