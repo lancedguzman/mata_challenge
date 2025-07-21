@@ -25,4 +25,4 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 # Deployment
-Go to this link to see deployed website using PythonAnywhere: lancedguzman05.pythonanywhere.com
+Go to this link to see deployed website using PythonAnywhere: [lancedguzman05.pythonanywhere.com](url)
