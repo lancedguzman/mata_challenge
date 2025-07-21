@@ -14,12 +14,15 @@ class Project(models.Model):
                             blank=True,)
     description = models.TextField(max_length=255, default="",
                                    blank=True)
+    tech_stack = models.TextField(max_length=255, default="",
+                                   blank=True)
     status = models.CharField(max_length=255, choices=STATUS_CHOICES,
                                 default="NS")
+    link = models.URLField(max_length=500, default="Not Yet Available",
+                           blank=True)
     image = models.ImageField(upload_to='projects/', blank=True,
                               null=True)
-    first_created = models.DateField(auto_now_add=True)
-
+    
     def __str__(self):
         return self.name
     

@@ -1,5 +1,6 @@
 .home-container {
     padding: 30px;
+    color: #ffffff;
 }
 
 .custom-navbar {
@@ -12,12 +13,12 @@
 }
 
 .custom-navbar .nav-link {
-    color: #222 !important;
+    color: #ffffff !important;
     transition: color 0.3s ease;
 }
 
 .custom-navbar .nav-link:hover {
-    color: #000 !important;
+    color: #ffffff !important;
 }
 
 .profile-pic {
@@ -25,7 +26,7 @@
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #333;
+    border: 5px solid #fff;
     margin-bottom: 15px;
 }
 
@@ -33,12 +34,22 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #ffffff; 
 }
 
 .bio {
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto;
+    color: #ffffff;
+}
+
+.title {
+    color: #ffffff;
+}
+
+.project-title {
+    color: #ffffff; 
 }
 
 .card-img-top {
@@ -61,6 +72,12 @@
     cursor: pointer;
 }
 
+.project-image {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
 .fadeIn {
     opacity: 0;
     transform: translateY(30px);
@@ -72,3 +89,10 @@
     transform: translateY(0);
 }
 
+.contact {
+    color: #ffffff; 
+}
+
+.project-details {
+    color: #ffffff;
+}

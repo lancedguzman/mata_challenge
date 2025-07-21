@@ -4,7 +4,7 @@
 
 {% block body_content %}
 <div class="container mt-5">
-    <h1 class="text-center mb-4">Contact Me</h1>
+    <h1 class="contact text-center mb-4">Contact Me!</h1>
 
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -12,25 +12,27 @@
                 {% csrf_token %}
                 {{ form.non_field_errors }}
 
-                <div class="mb-3">
+                <div class="mb-3 text-white">
                     {{ form.email.label_tag }}
                     {{ form.email|add_class:"form-control" }}
                     {{ form.email.errors }}
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 text-white">
                     {{ form.subject.label_tag }}
                     {{ form.subject|add_class:"form-control" }}
                     {{ form.subject.errors }}
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 text-white">
                     {{ form.message.label_tag }}
                     {{ form.message|add_class:"form-control" }}
                     {{ form.message.errors }}
                 </div>
 
-                <button type="submit" class="btn btn-primary">Send</button>
+                <button type="submit" class="btn justify-content-center" style="background-color: #ff636b; border-color: #ff636b; color: white;">
+                    Send
+                </button>
             </form>
 
             {% if success %}
