@@ -14,6 +14,7 @@ Backend: Python (Django)
 2. Latest version of Django
 3. Bootstrap
 4. Widget Tweaks
+5. Pillow
 
 # Setup & Install Requirements
 ```bash
