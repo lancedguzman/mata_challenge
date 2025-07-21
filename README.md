@@ -24,3 +24,5 @@ python -m venv venv
 # Install core dependencies
 pip install -r requirements.txt
 ```
+# Deployment
+Go to this link to see deployed website using PythonAnywhere: lancedguzman05.pythonanywhere.com
