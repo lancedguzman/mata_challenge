@@ -7,8 +7,9 @@ class ProjectAdmin(admin.ModelAdmin):
     """Creates the Project Admin Panel."""
     model = Project
     list_display = ["name", "creator",
-                    "description", "status",
-                    "first_created",]
+                    "description", "tech_stack",
+                    "status", "link",
+                    "image",]
     
 
 class ContactAdmin(admin.ModelAdmin):
