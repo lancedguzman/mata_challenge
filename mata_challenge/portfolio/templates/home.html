@@ -1,0 +1,46 @@
+{% extends 'base_template.html' %}
+{% load static %}
+
+{% block body_content %}
+
+<div class="home-container text-center">
+    <div class="profile">
+        <img src="{% static 'images/profile.jpg' %}" alt="Profile Picture" class="profile-pic">
+    </div>
+    <h1 class="name">Lance De Guzman</h1>
+    <p class="bio">Web Developer passionate about clean code, intuitive UI, and solving real-world problems through technology.</p>
+</div>
+
+
+{% if projects %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">My Projects</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for project in projects %}
+        <div class="col fadeIn">
+            <div class="card h-100 shadow-sm">
+                {% if project.image %}
+                <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.name }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{% url 'project' pk=project.pk %}" class="text-decoration-none">{{ project.name }}</a>
+                    </h5>
+                    <p class="card-text">{{ project.get_status_display }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

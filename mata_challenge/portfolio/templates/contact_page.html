@@ -1,0 +1,52 @@
+{% extends 'base_template.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block body_content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Contact Me</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+
+                <div class="mb-3">
+                    {{ form.email.label_tag }}
+                    {{ form.email|add_class:"form-control" }}
+                    {{ form.email.errors }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form.subject.label_tag }}
+                    {{ form.subject|add_class:"form-control" }}
+                    {{ form.subject.errors }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form.message.label_tag }}
+                    {{ form.message|add_class:"form-control" }}
+                    {{ form.message.errors }}
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+
+            {% if success %}
+                <div class="alert alert-success mt-3">
+                    Your message has been sent!
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
